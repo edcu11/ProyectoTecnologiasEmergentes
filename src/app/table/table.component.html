@@ -18,7 +18,7 @@
 				<tr *ngFor="let prod of arrProds">
 					<td><input type="checkbox" class="checkbox" id="chk{{prod.Id}}"></td>
 					<td>
-						<img alt="Product: {{prod.name}} Image" src="{{prod.imageUrl}}" width="100" height="auto" align="center">
+						<img alt="Product: {{prod.name}} Image" src="{{prod.imageUrl}}" width="100" height="auto" align="center" onerror="this.src='../../assets/product_image_default.png'">
 					</td>
 					<td>{{prod.name}}</td>
 					<td>{{prod.description}}</td>
