@@ -1,0 +1,35 @@
+<section class="content">
+	<div class="box box-success">
+		<div class="box-header"></div>
+		<div class="box-body table-responsive no-padding">
+			<table class="table table-hover" *ngIf="arrProds">
+				<thead>
+					<tr role="row">
+						<th><input type="checkbox" class="checkbox" id="selectAll"></th>
+						<th></th>
+						<th>Nombre</th>
+						<th>Descripción</th>
+						<th>Precio</th>
+						<th>Visibilidad</th>
+						<th></th>
+					</tr>
+				</thead>
+
+				<tr *ngFor="let prod of arrProds">
+					<td><input type="checkbox" class="checkbox" id="chk{{prod.Id}}"></td>
+					<td>
+						<img alt="Product: {{prod.name}} Image" src="{{prod.imageUrl}}" width="100" height="auto" align="center">
+					</td>
+					<td>{{prod.name}}</td>
+					<td>{{prod.description}}</td>
+					<td>{{prod.price}}</td>
+					<td>
+					</td>
+					<td>
+						<button id="{{prod.Id}}" class="btn btn-info btn-flat fa fa-pencil"></button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</section>

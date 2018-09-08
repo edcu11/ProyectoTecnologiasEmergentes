@@ -1,0 +1,137 @@
+[
+  {
+    "id": "1",
+    "createdAt": "2018-09-07T21:29:03.843Z",
+    "subtotalAmount": "758.10",
+    "taxAmount": "694.28",
+    "totalAmount": "256.64",
+    "itemsCount": 35,
+    "clientName": "Izabella Gorczany II"
+  },
+  {
+    "id": "2",
+    "createdAt": "2018-09-07T02:12:03.061Z",
+    "subtotalAmount": "277.36",
+    "taxAmount": "802.94",
+    "totalAmount": "53.58",
+    "itemsCount": 43,
+    "clientName": "Leora Willms"
+  },
+  {
+    "id": "3",
+    "createdAt": "2018-09-07T04:02:21.058Z",
+    "subtotalAmount": "810.40",
+    "taxAmount": "680.93",
+    "totalAmount": "992.19",
+    "itemsCount": 57,
+    "clientName": "Idell Breitenberg"
+  },
+  {
+    "id": "4",
+    "createdAt": "2018-09-07T03:09:53.583Z",
+    "subtotalAmount": "892.99",
+    "taxAmount": "161.04",
+    "totalAmount": "842.15",
+    "itemsCount": 90,
+    "clientName": "Mr. Juana Lind"
+  },
+  {
+    "id": "5",
+    "createdAt": "2018-09-07T09:52:02.257Z",
+    "subtotalAmount": "232.23",
+    "taxAmount": "763.85",
+    "totalAmount": "657.25",
+    "itemsCount": 11,
+    "clientName": "Madison Berge"
+  },
+  {
+    "id": "6",
+    "createdAt": "2018-09-08T01:17:50.450Z",
+    "subtotalAmount": "33.18",
+    "taxAmount": "847.65",
+    "totalAmount": "218.66",
+    "itemsCount": 27,
+    "clientName": "Jaime Rutherford"
+  },
+  {
+    "id": "7",
+    "createdAt": "2018-09-07T18:15:07.877Z",
+    "subtotalAmount": "217.88",
+    "taxAmount": "478.91",
+    "totalAmount": "261.33",
+    "itemsCount": 96,
+    "clientName": "Scot Mills"
+  },
+  {
+    "id": "8",
+    "createdAt": "2018-09-07T05:41:02.866Z",
+    "subtotalAmount": "312.72",
+    "taxAmount": "344.42",
+    "totalAmount": "540.67",
+    "itemsCount": 18,
+    "clientName": "Jordane Kuhlman"
+  },
+  {
+    "id": "9",
+    "createdAt": "2018-09-07T16:03:16.175Z",
+    "subtotalAmount": "81.80",
+    "taxAmount": "603.96",
+    "totalAmount": "488.68",
+    "itemsCount": 80,
+    "clientName": "Cedrick Koch"
+  },
+  {
+    "id": "10",
+    "createdAt": "2018-09-08T01:09:27.121Z",
+    "subtotalAmount": "390.02",
+    "taxAmount": "703.31",
+    "totalAmount": "814.52",
+    "itemsCount": 98,
+    "clientName": "Mr. Amani Simonis"
+  },
+  {
+    "id": "11",
+    "createdAt": "2018-09-07T21:17:10.445Z",
+    "subtotalAmount": "612.91",
+    "taxAmount": "709.18",
+    "totalAmount": "520.39",
+    "itemsCount": 41,
+    "clientName": "Kaleigh Tillman Sr."
+  },
+  {
+    "id": "12",
+    "createdAt": "2018-09-08T00:03:45.105Z",
+    "subtotalAmount": "538.07",
+    "taxAmount": "990.88",
+    "totalAmount": "823.41",
+    "itemsCount": 55,
+    "clientName": "Michelle Cummings"
+  },
+  {
+    "id": "13",
+    "createdAt": "2018-09-07T13:42:36.973Z",
+    "subtotalAmount": "608.61",
+    "taxAmount": "457.72",
+    "totalAmount": "459.56",
+    "itemsCount": 21,
+    "clientName": "Keira Fritsch"
+  },
+  {
+    "id": "14",
+    "createdAt": "2018-09-07T09:03:37.285Z",
+    "subtotalAmount": "782.44",
+    "taxAmount": "959.69",
+    "totalAmount": "247.89",
+    "itemsCount": 56,
+    "clientName": "Devin Denesik"
+  },
+  {
+    "id": "15",
+    "createdAt": "2018-09-07T15:35:06.756Z",
+    "subtotalAmount": "286.53",
+    "taxAmount": "271.28",
+    "totalAmount": "783.70",
+    "itemsCount": 54,
+    "clientName": "Sydney Gottlieb"
+  }
+]
