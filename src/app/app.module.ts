@@ -7,12 +7,14 @@ import { UiSwitchModule } from 'ngx-ui-switch';
 import { AppComponent } from './app.component';
 import { ComponentListComponent } from './component-list/component-list.component';
 import { TableComponent } from './table/table.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ComponentListComponent,
-    TableComponent
+    TableComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
