@@ -1,8 +1,20 @@
+<script type="text/javascript">
+	$(document).ready(function() {
+	    $('#dt').DataTable({
+	    	"paging": true,
+	    	"lengthChange": false,
+	    	"ordering": true,
+	        "info": true,
+	        "autoWidth": false
+	    });
+	} );
+</script>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" />
 </head>
 <div class="text-center">
   <img width="300" alt="Sube Logo" src="../assets/logo.png"/>

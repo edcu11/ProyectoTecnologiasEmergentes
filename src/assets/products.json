@@ -3,7 +3,7 @@
     "id": "1",
     "createdAt": 1527982841,
     "name": "Producto 1",
-    "description": "fuck",
+    "description": "Descripción para el producto 1",
     "imageUrl": "https://unsplash.it/300?image=1",
     "price": 8,
     "category_id": 62

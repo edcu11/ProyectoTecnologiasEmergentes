@@ -6,6 +6,7 @@ import { UiSwitchModule } from 'ngx-ui-switch';
 import { OrderPipe } from 'ngx-order-pipe';
 import { Globals } from './globals';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import {DataTableModule} from "angular-6-datatable";
 
 import { AppComponent } from './app.component';
 import { ComponentListComponent } from './component-list/component-list.component';
@@ -25,7 +26,8 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     HttpClientModule,
     AngularFontAwesomeModule,
     UiSwitchModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    DataTableModule
   ],
   providers: [Globals],
   bootstrap: [AppComponent]
