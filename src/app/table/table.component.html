@@ -1,36 +1,73 @@
-<section class="content">
-	<div class="box box-success">
-		<div class="box-header"></div>
-		<div class="box-body table-responsive no-padding">
-			<table class="table table-hover" *ngIf="arrProds">
-				<thead>
-					<tr role="row">
-						<th><input type="checkbox" class="checkbox" id="selectAll"></th>
-						<th></th>
-						<th>Nombre</th>
-						<th>Descripción</th>
-						<th>Precio</th>
-						<th>Visibilidad</th>
-						<th></th>
+<div *ngIf = "isMobile == false ; else mobileTable">
+	<section class="content">
+		<div class="box box-success">
+			<div class="box-header"></div>
+			<div class="box-body table-responsive no-padding">
+				<table class="table table-hover table-bordered table-striped" *ngIf="arrProds">
+					<thead>
+						<tr role="row">
+							<td><input type="checkbox" class="checkbox" id="selectAll"></td>
+							<td></td>
+							<td>
+								<a href="#" (click)="sortType = 'name'; sortReverse = !sortReverse">
+									Nombre
+									<span [hidden]="!(sortType == 'name')" class="fa" [ngClass]="{'fa-caret-up': sortReverse, 'fa-caret-down': !sortReverse}"></span>
+								</a>
+							</td>
+							<td>
+								<a href="#" (click)="sortType = 'description'; sortReverse = !sortReverse">
+									Descripción
+									<span [hidden]="!(sortType == 'description')" class="fa" [ngClass]="{'fa-caret-up': sortReverse, 'fa-caret-down': !sortReverse}"></span>
+								</a>
+							</td>
+							<td>
+								<a href="#" (click)="sortType = 'price'; sortReverse = !sortReverse">
+									Precio
+									<span [hidden]="!(sortType == 'price')" class="fa" [ngClass]="{'fa-caret-up': sortReverse, 'fa-caret-down': !sortReverse}"></span>
+								</a>
+							</td>
+							<td>Visibilidad</td>
+							<td></td>
+						</tr>
+					</thead>
+					<tr *ngFor="let prod of arrProds | orderBy:sortType:sortReverse | filter:globals.searchQuery">
+						<td><input type="checkbox" ng-model="prod.selected" selected="prod.selected"></td>
+						<td>
+							<img alt="Product: {{prod.name}} Image" src="{{prod.imageUrl}}" width="100" height="auto" align="center" onerror="this.src='../../assets/product_image_default.png'">
+						</td>
+						<td>{{prod.name}}</td>
+						<td>{{prod.description}}</td>
+						<td>L. {{prod.price}}</td>
+						<td>
+							<ui-switch></ui-switch>
+						</td>
+						<td>
+							<button id="{{prod.Id}}" class="btn btn-info btn-flat fa fa-pencil"></button>
+						</td>
 					</tr>
-				</thead>
-
-				<tr *ngFor="let prod of arrProds">
-					<td><input type="checkbox" class="checkbox" id="chk{{prod.Id}}"></td>
-					<td>
-						<img alt="Product: {{prod.name}} Image" src="{{prod.imageUrl}}" width="100" height="auto" align="center" onerror="this.src='../../assets/product_image_default.png'">
-					</td>
-					<td>{{prod.name}}</td>
-					<td>{{prod.description}}</td>
-					<td>{{prod.price}}</td>
-					<td>
-						<ui-switch></ui-switch>
-					</td>
-					<td>
-						<button id="{{prod.Id}}" class="btn btn-info btn-flat fa fa-pencil"></button>
-					</td>
-				</tr>
-			</table>
+				</table>
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
+</div>
+<ng-template #mobileTable>
+	<section class = "content">
+		<div class = "box box-success">
+			<div class = "box-header"></div>
+			<div class = "box-body no-padding">
+				<div *ngIf = "arrProds">
+					<div class="container" *ngFor = "let prod of arrProds | filter:globals.searchQuery">
+						<div class="input-group" align="center">
+							<img alt="Product: {{prod.name}} Image" src="{{prod.imageUrl}}" width="100" height="100" onerror="this.src='../../assets/product_image_default.png'">
+							<label class="text-primary offset-1">{{prod.name}}</label>
+							<label class="offset-1">L. {{prod.price}}</label>							
+						</div>
+	
+						<label class="offset-1">{{prod.description}}</label>
+						<br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</ng-template>

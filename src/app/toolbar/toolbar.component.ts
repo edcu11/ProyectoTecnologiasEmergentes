@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Globals } from '../globals';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private globals:Globals) { }
 
   ngOnInit() {
+  }
+
+  onKeyUp(event: any){
+  	this.globals.searchQuery = event.target.value;
   }
 
 }

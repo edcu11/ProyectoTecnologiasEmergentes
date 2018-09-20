@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpErrorResponse } from '@angular/common/http';
+import { Globals } from '../globals';
 
 @Component({
   selector: 'app-table',
@@ -10,15 +11,29 @@ import { HttpErrorResponse } from '@angular/common/http';
 
 export class TableComponent implements OnInit {
   
-  constructor(private httpService: HttpClient) { }
+  constructor(private httpService: HttpClient, private globals:Globals) { 
+  	this.checkBoxesMode = "onClick";
+  }
 
   arrProds: string [];
+  checkBoxesMode: string;
+  isMobile: boolean;
+
+  //Search Variables
+  sortType: string;
+  sortReverse: boolean;
 
   ngOnInit() {
+  	this.isMobile = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+  	this.sortType = "name";
+  	this.sortReverse = false;
+  	this.globals.searchQuery = "";
   	this.httpService.get('../../assets/products.json').subscribe(
   		data => {
   			this.arrProds = data as string [];
-  			console.log(this.arrProds[1]);
+  			this.arrProds.map(function(prod){
+  				prod["selected"] = true;
+  			});
   		},
   		(err: HttpErrorResponse) =>{
   			console.log(err.message);
@@ -26,4 +41,9 @@ export class TableComponent implements OnInit {
   	);
   }
 
+  checkAll() {
+  	this.arrProds.map(function(prod){
+  		prod["selected"] = true;
+  	});
+  }
 }
