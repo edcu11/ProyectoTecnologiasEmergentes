@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Globals } from '../globals';
@@ -39,6 +39,16 @@ export class TableComponent implements OnInit {
   			console.log(err.message);
   		}
   	);
+  }
+
+  @HostListener('window:resize', ['$event'])
+  sizeChange(event) {
+    if(window.innerWidth <= 800)
+      this.isMobile = true;
+    else
+      this.isMobile = false;
+
+    console.log(window.innerWidth);
   }
 
   checkAll() {
